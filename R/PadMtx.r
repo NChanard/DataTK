@@ -16,10 +16,10 @@ PadMtx <- function(mat.mtx=NULL, padSize.num=1, value.num=0, side.chr=c('top','b
         mat.mtx <- rbind(mat.mtx,row.pad)
     }
     col.pad = rep(list(rep(value.num,dim(mat.mtx)[1])),padSize.num) %>% do.call(cbind,.)
-    if('right' %in% side.chr){
+    if('left' %in% side.chr){
         mat.mtx <- cbind(col.pad,mat.mtx)
     }
-    if('left' %in% side.chr){
+    if('right' %in% side.chr){
         mat.mtx <- cbind(mat.mtx,col.pad)
     }
     return(mat.mtx)
