@@ -4,24 +4,12 @@
 \alias{ResizeMatrix}
 \title{ResizeMatrix}
 \usage{
-ResizeMatrix(
-  mat.mtx = NULL,
-  rowDim.num = NULL,
-  colDim.num = NULL,
-  rowKeep.ndx = NULL,
-  colKeep.ndx = NULL
-)
+ResizeMatrix(matrice.mtx, newDim.num = dim(matrice.mtx))
 }
 \arguments{
-\item{mat.mtx}{<matrix>: a Matrix to resize}
+\item{matrice.mtx}{<matrix>: a Matrix to resize}
 
-\item{rowDim.num}{<integer>: the number of rows in reiszed matrix}
-
-\item{colDim.num}{<integer>: the number of columns in reiszed matrix}
-
-\item{rowKeep.ndx}{<integer>: index of one row to keep in resized matrix}
-
-\item{colKeep.ndx}{<integer>: index of one column to keep in resized matrix}
+\item{newDim.num}{<integer>: the number of rows and cols in resized matrix.}
 }
 \value{
 resized matrix
@@ -30,13 +18,13 @@ resized matrix
 Resize a matrix in new dimension
 }
 \examples{
-mat.mtx <- matrix(0,11,11)
-mat.mtx[which(as.logical(1:(11*11)\%\%2))] <- 1:ceiling((11*11)/2)
-mat.mtx[2,] <- 100
-mat.mtx[,7] <- 200
-mat.mtx
-ResizeMatrix(mat.mtx=mat.mtx, rowDim.num=7, colDim.num=7, rowKeep.ndx=NULL, colKeep.ndx=NULL)
-ResizeMatrix(mat.mtx=mat.mtx, rowDim.num=7, colDim.num=7, rowKeep.ndx=2, colKeep.ndx=7)
-ResizeMatrix(mat.mtx=mat.mtx, rowDim.num=13, colDim.num=13, rowKeep.ndx=NULL, colKeep.ndx=NULL)
-ResizeMatrix(mat.mtx=mat.mtx, rowDim.num=13, colDim.num=13, rowKeep.ndx=2, colKeep.ndx=7)
+matrice.mtx <- matrix(0,11,11)
+matrice.mtx[which(as.logical(1:(11*11)\%\%2))] <- 1:ceiling((11*11)/2)
+matrice.mtx[2,] <- 100
+matrice.mtx[,7] <- 200
+matrice.mtx
+ResizeMatrix(matrice.mtx=matrice.mtx, newDim.num=c(7,7))
+ResizeMatrix(matrice.mtx=matrice.mtx, newDim.num=c(7,7))
+ResizeMatrix(matrice.mtx=matrice.mtx, newDim.num=c(13,13))
+ResizeMatrix(matrice.mtx=matrice.mtx, newDim.num=c(13,13))
 }

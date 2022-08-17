@@ -9,11 +9,14 @@ A Tool set to help in data handle.
   
 ### Depends  
 - R (>= 4.1.2),
-- DevToolKit,
+- DevToolKit,  
+
+### Imports  
 - tibble,
 - Matrix,
 - S4Vectors,
 - dplyr
+- StatToolKit
   
 ## 1. Instalation  
 ```
