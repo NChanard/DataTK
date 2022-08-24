@@ -8,16 +8,17 @@ A Tool set to help in data handle.
 - 0.1.0  
   
 ### Depends  
-- R (>= 4.1.2),
-- DevToolKit,  
+- R (>= 4.1.2)
 
 ### Imports  
-- tibble,
-- Matrix,
-- S4Vectors,
+- DevToolKit
 - dplyr
+- magrittr
+- Matrix
+- S4Vectors
 - StatToolKit
-  
+- tibble
+
 ## 1. Instalation  
 ```
 devtools::install_github("Nchanard/DatHandToolKit")

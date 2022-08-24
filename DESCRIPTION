@@ -7,14 +7,17 @@ Maintainer: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
 Description: A Tool set to help in data handle.
 Depends:
     R (>= 4.1.2),
-    DevToolKit,
-    S4Vectors,
 Imports:
-    tibble,
-    Matrix,
+    DevToolKit,
     dplyr,
-    StatToolKit
-Remotes: NChanard/DevToolKit
+    magrittr,
+    Matrix,
+    S4Vectors,
+    StatToolKit,
+    tibble
+Remotes:
+    NChanard/DevToolKit,
+    NChanard/StatToolKit
 License: None
 Encoding: UTF-8
 LazyData: true

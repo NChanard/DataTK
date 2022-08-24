@@ -25,7 +25,7 @@ apply a function to the values of two RLE. e.g paste, sum, mean
 first.rle = rle(c("A","A","B"))
 second.rle = rle(c("A","B","B"))
 ReduceRun(first.rle=first.rle, second.rle=second.rle, reduceFun.chr="paste", sep="_" )
-first.rle = Rle(c(1,2,3))
-second.rle = Rle(c(5,5,5))
+first.rle = S4Vectors::Rle(c(1,2,3))
+second.rle = S4Vectors::Rle(c(5,5,5))
 ReduceRun(first.rle=first.rle, second.rle=second.rle, reduceFun.chr="sum")
 }

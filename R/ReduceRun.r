@@ -10,23 +10,23 @@
 #' first.rle = rle(c("A","A","B"))
 #' second.rle = rle(c("A","B","B"))
 #' ReduceRun(first.rle=first.rle, second.rle=second.rle, reduceFun.chr="paste", sep="_" )
-#' first.rle = Rle(c(1,2,3))
-#' second.rle = Rle(c(5,5,5))
+#' first.rle = S4Vectors::Rle(c(1,2,3))
+#' second.rle = S4Vectors::Rle(c(5,5,5))
 #' ReduceRun(first.rle=first.rle, second.rle=second.rle, reduceFun.chr="sum")
 ReduceRun <- function(first.rle, second.rle, reduceFun.chr="paste",...){
     if (class(first.rle)=="rle"){
         firstLen.num = first.rle$length
         firstVal.vec = first.rle$values
     }else if (class(first.rle)=="Rle") {
-        firstLen.num = runLength(first.rle)
-        firstVal.vec = runValue(first.rle)
+        firstLen.num = S4Vectors::runLength(first.rle)
+        firstVal.vec = S4Vectors::runValue(first.rle)
     }
     if (class(second.rle)=="rle"){
         secondLen.num = second.rle$length
         secondVal.vec = second.rle$values
     }else if (class(second.rle)=="Rle") {
-        secondLen.num = runLength(second.rle)
-        secondVal.vec = runValue(second.rle)
+        secondLen.num = S4Vectors::runLength(second.rle)
+        secondVal.vec = S4Vectors::runValue(second.rle)
     }
     newLen.num=NULL
     newVal.vec=NULL
@@ -45,5 +45,5 @@ ReduceRun <- function(first.rle, second.rle, reduceFun.chr="paste",...){
             }
             }) %>% invisible()
     }
-    return(Rle(values=newVal.vec,lengths=newLen.num))
+    return(S4Vectors::Rle(values=newVal.vec,lengths=newLen.num))
 }
