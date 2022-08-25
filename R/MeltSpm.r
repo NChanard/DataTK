@@ -12,11 +12,11 @@
 #' meltedMat.tbl <- MeltSpm(mat.spm)
 #' meltedMat.tbl[order(meltedMat.tbl$i),]
 MeltSpm = function(mat.spm=NULL){
-        if(DevToolKit::is_not_in("dgCMatrix",class(mat.spm))){mat.spm=as(mat.spm, "dgCMatrix")}
+        if(DevTK::NotIn("dgCMatrix",class(mat.spm))){mat.spm=as(mat.spm, "dgCMatrix")}
         dp.num <- mat.spm@p %>% diff
         tibble::tibble(
             i=mat.spm@i+1 %>% as.integer,
             j=mat.spm@Dim %>% magrittr::extract(.,2) %>% seq(1,.) %>% lapply(.,function(j.ndx){dp.num[j.ndx] %>% rep(j.ndx,.) %>% return(.)}) %>% unlist,
             x=mat.spm@x
-        ) %>% DevToolKit::add_attributes(list(matrice.attr=attributes(mat.spm)[which(DevToolKit::is_not_in(names(attributes(mat.spm)),c("i","p","Dimnames","x","factors","class")))])) %>% return
+        ) %>% DevTK::AddAttr(list(matrice.attr=attributes(mat.spm)[which(DevTK::NotIn(names(attributes(mat.spm)),c("i","p","Dimnames","x","factors","class")))])) %>% return
 }

@@ -1,4 +1,4 @@
-# DatHandToolKit
+# DataTK
 A Tool set to help in data handle.  
   
 ### Author  
@@ -11,7 +11,7 @@ A Tool set to help in data handle.
 - R (>= 4.1.2)
 
 ### Imports  
-- DevToolKit
+- DevTK
 - dplyr
 - magrittr
 - Matrix
@@ -21,11 +21,11 @@ A Tool set to help in data handle.
 
 ## 1. Instalation  
 ```
-devtools::install_github("Nchanard/DatHandToolKit")
+devtools::install_github("Nchanard/DataTK")
 ```
   
 ## 2. Documentation  
-https://nchanard.github.io/DatHandToolKit/
+https://nchanard.github.io/DataTK/
   
 ## 3. Standard  
 ### A. Variables  
