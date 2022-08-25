@@ -8,7 +8,7 @@ A Tool set to help in data handle.
 - 0.1.0  
   
 ### Depends  
-- R (>= 4.1.2)
+- R (>= 4.1)
 
 ### Imports  
 - DevTK
