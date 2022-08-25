@@ -14,17 +14,17 @@
 #' second.rle = S4Vectors::Rle(c(5,5,5))
 #' ReduceRun(first.rle=first.rle, second.rle=second.rle, reduceFun.chr="sum")
 ReduceRun <- function(first.rle, second.rle, reduceFun.chr="paste",...){
-    if (class(first.rle)=="rle"){
+    if (methods::is(first.rle,"rle")){
         firstLen.num = first.rle$length
         firstVal.vec = first.rle$values
-    }else if (class(first.rle)=="Rle") {
+    }else if (methods::is(first.rle,"Rle")) {
         firstLen.num = S4Vectors::runLength(first.rle)
         firstVal.vec = S4Vectors::runValue(first.rle)
     }
-    if (class(second.rle)=="rle"){
+    if (methods::is(second.rle,"rle")){
         secondLen.num = second.rle$length
         secondVal.vec = second.rle$values
-    }else if (class(second.rle)=="Rle") {
+    }else if (methods::is(second.rle,"Rle")) {
         secondLen.num = S4Vectors::runLength(second.rle)
         secondVal.vec = S4Vectors::runValue(second.rle)
     }

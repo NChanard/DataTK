@@ -21,5 +21,5 @@ Rise0 = function(mat.spm=NULL, which.ndx=NULL, coord.dtf=NULL){
         }
         coord.dtf$x <- 0
         names(coord.dtf) <- c("i","j","x")
-        rbind(MeltSpm(mat.spm),coord.dtf) %>% dplyr::arrange(., j, i) %>% {Matrix::sparseMatrix(i=.$i,j=.$j,x=.$x,dims=dim(mat.spm))} %>% return
+        rbind(MeltSpm(mat.spm),coord.dtf) %>% dplyr::arrange(., j, i) %>% {Matrix::sparseMatrix(i=.$i,j=.$j,x=.$x,dims=dim(mat.spm))} %>% return(.)
 }

@@ -15,8 +15,9 @@ A Tool set to help in data handle.
 - dplyr
 - magrittr
 - Matrix
+- methods
 - S4Vectors
-- StatToolKit
+- StatTK
 - tibble
 
 ## 1. Instalation  

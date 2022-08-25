@@ -15,8 +15,8 @@
 ResizeMatrix <- function(matrice.mtx, newDim.num=dim(matrice.mtx)){
     # Rescaling
         newCoord.mtx <- as.matrix(expand.grid(seq_len(newDim.num[1]), seq_len(newDim.num[2])))
-        rescaleCol.ndx <- StatToolKit::MinMaxScale(newCoord.mtx[,1],1, dim(matrice.mtx)[1])
-        rescaleRow.ndx <- StatToolKit::MinMaxScale(newCoord.mtx[,2],1, dim(matrice.mtx)[2])
+        rescaleCol.ndx <- StatTK::MinMaxScale(newCoord.mtx[,1],1, dim(matrice.mtx)[1])
+        rescaleRow.ndx <- StatTK::MinMaxScale(newCoord.mtx[,2],1, dim(matrice.mtx)[2])
     # Interpolation
         col.ndx <- floor(rescaleCol.ndx)
         row.ndx <- floor(rescaleRow.ndx)
