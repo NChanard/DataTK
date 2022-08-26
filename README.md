@@ -1,5 +1,5 @@
 # DataTK
-A Tool set to help in data handle.  
+Set of data manipulation tools.
   
 ### Author  
 - Nicolas Chanard \<nicolas.chanard@univ-tlse3.fr>  
