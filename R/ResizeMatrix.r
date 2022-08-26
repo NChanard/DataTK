@@ -13,10 +13,11 @@
 #' ResizeMatrix(matrice.mtx=matrice.mtx, newDim.num=c(7,7))
 #' ResizeMatrix(matrice.mtx=matrice.mtx, newDim.num=c(13,13))
 ResizeMatrix <- function(matrice.mtx, newDim.num=dim(matrice.mtx)){
+    .MinMaxScale <- function(x.num, min.num=(0), max.num=1){min.num + (((x.num-min(x.num,na.rm=TRUE))*(max.num-min.num)) / (max(x.num,na.rm=TRUE) - min(x.num,na.rm=TRUE)))}
     # Rescaling
         newCoord.mtx <- as.matrix(expand.grid(seq_len(newDim.num[1]), seq_len(newDim.num[2])))
-        rescaleCol.ndx <- StatTK::MinMaxScale(newCoord.mtx[,1],1, dim(matrice.mtx)[1])
-        rescaleRow.ndx <- StatTK::MinMaxScale(newCoord.mtx[,2],1, dim(matrice.mtx)[2])
+        rescaleCol.ndx <- .MinMaxScale(newCoord.mtx[,1],1, dim(matrice.mtx)[1])
+        rescaleRow.ndx <- .MinMaxScale(newCoord.mtx[,2],1, dim(matrice.mtx)[2])
     # Interpolation
         col.ndx <- floor(rescaleCol.ndx)
         row.ndx <- floor(rescaleRow.ndx)

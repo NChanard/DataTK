@@ -14,11 +14,9 @@ Imports:
     Matrix,
     methods,
     S4Vectors,
-    StatTK,
     tibble
 Remotes:
-    NChanard/DevTK,
-    NChanard/StatTK
+    NChanard/DevTK
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

@@ -17,7 +17,6 @@ Set of data manipulation tools.
 - Matrix
 - methods
 - S4Vectors
-- StatTK
 - tibble
 
 ## 1. Instalation  
