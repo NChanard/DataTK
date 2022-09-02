@@ -16,7 +16,7 @@ PadMtx(
 
 \item{padSize.num}{<numeric>: Number of columns or rows to add (Default 1)}
 
-\item{value.num}{<numeric>: Value to add (Default 0)}
+\item{value.num}{<numeric>: Value to add (Default 0) If Null create mirror of choosen sides.}
 
 \item{side.chr}{<character>: side to pad, must be one or some of 'top','bot','right' or 'left' (Default c('top','bot','right','left') )}
 }
@@ -25,4 +25,11 @@ Matrix
 }
 \description{
 Add a value around a matrix
+}
+\examples{
+mat.mtx = matrix(1:25,5,5)
+PadMtx(mat.mtx=mat.mtx,  padSize.num=1, value.num=0, side.chr=c('top','bot','right','left') )
+PadMtx(mat.mtx=mat.mtx,  padSize.num=1, value.num=NULL, side.chr=c('top','bot','right','left') )
+PadMtx(mat.mtx=mat.mtx,  padSize.num=1, value.num=0, side.chr=c('right','left') )
+PadMtx(mat.mtx=mat.mtx,  padSize.num=1, value.num=0, side.chr=c('top') )
 }

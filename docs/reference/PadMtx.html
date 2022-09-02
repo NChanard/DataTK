@@ -63,7 +63,7 @@
 
 
 <dt>value.num</dt>
-<dd><p>&lt;numeric&gt;: Value to add (Default 0)</p></dd>
+<dd><p>&lt;numeric&gt;: Value to add (Default 0) If Null create mirror of choosen sides.</p></dd>
 
 
 <dt>side.chr</dt>
@@ -77,6 +77,44 @@
 <p>Matrix</p>
     </div>
 
+    <div id="ref-examples">
+    <h2>Examples</h2>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">mat.mtx</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">25</span>,<span class="fl">5</span>,<span class="fl">5</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">PadMtx</span><span class="op">(</span>mat.mtx<span class="op">=</span><span class="va">mat.mtx</span>,  padSize.num<span class="op">=</span><span class="fl">1</span>, value.num<span class="op">=</span><span class="fl">0</span>, side.chr<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'top'</span>,<span class="st">'bot'</span>,<span class="st">'right'</span>,<span class="st">'left'</span><span class="op">)</span> <span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5] [,6] [,7]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    0    0    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    0    1    6   11   16   21    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    0    2    7   12   17   22    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    0    3    8   13   18   23    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    0    4    9   14   19   24    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [6,]    0    5   10   15   20   25    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [7,]    0    0    0    0    0    0    0</span>
+<span class="r-in"><span class="fu">PadMtx</span><span class="op">(</span>mat.mtx<span class="op">=</span><span class="va">mat.mtx</span>,  padSize.num<span class="op">=</span><span class="fl">1</span>, value.num<span class="op">=</span><span class="cn">NULL</span>, side.chr<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'top'</span>,<span class="st">'bot'</span>,<span class="st">'right'</span>,<span class="st">'left'</span><span class="op">)</span> <span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         col.pad               col.pad</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row.pad       1 1  6 11 16 21      21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               1 1  6 11 16 21      21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               2 2  7 12 17 22      22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               3 3  8 13 18 23      23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               4 4  9 14 19 24      24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>               5 5 10 15 20 25      25</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> row.pad       5 5 10 15 20 25      25</span>
+<span class="r-in"><span class="fu">PadMtx</span><span class="op">(</span>mat.mtx<span class="op">=</span><span class="va">mat.mtx</span>,  padSize.num<span class="op">=</span><span class="fl">1</span>, value.num<span class="op">=</span><span class="fl">0</span>, side.chr<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'right'</span>,<span class="st">'left'</span><span class="op">)</span> <span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5] [,6] [,7]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    0    1    6   11   16   21    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    0    2    7   12   17   22    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    0    3    8   13   18   23    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    0    4    9   14   19   24    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    0    5   10   15   20   25    0</span>
+<span class="r-in"><span class="fu">PadMtx</span><span class="op">(</span>mat.mtx<span class="op">=</span><span class="va">mat.mtx</span>,  padSize.num<span class="op">=</span><span class="fl">1</span>, value.num<span class="op">=</span><span class="fl">0</span>, side.chr<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'top'</span><span class="op">)</span> <span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      [,1] [,2] [,3] [,4] [,5]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]    0    0    0    0    0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]    1    6   11   16   21</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]    2    7   12   17   22</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4,]    3    8   13   18   23</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [5,]    4    9   14   19   24</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [6,]    5   10   15   20   25</span>
+</code></pre></div>
+    </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top"><h2 data-toc-skip>Contents</h2>
