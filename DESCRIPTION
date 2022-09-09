@@ -17,7 +17,8 @@ Imports:
     S4Vectors,
     tibble
 Suggests:
-    knitr
+    knitr,
+    rmarkdown
 Remotes:
     NChanard/DevTK
 License: MIT + file LICENSE
