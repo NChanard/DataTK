@@ -3,3 +3,7 @@
 ^\.git
 ^docs
 ^LICENSE\.md$
+^pkgdown$
+^\.github$
+^README\.Rmd$
+^_pkgdown.yml$

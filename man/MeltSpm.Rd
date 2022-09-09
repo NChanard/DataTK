@@ -2,18 +2,21 @@
 % Please edit documentation in R/MeltSpm.r
 \name{MeltSpm}
 \alias{MeltSpm}
-\title{MeltSpm}
+\title{Coerce matrix in tibble.}
 \usage{
 MeltSpm(mat.spm = NULL)
 }
 \arguments{
-\item{mat.spm}{<dgCMatrix or dgCMatrix coercible>: Matrix}
+\item{mat.spm}{<dgCMatrix or dgCMatrix coercible>: a matrix.}
 }
 \value{
-A tibble
+A tibble.
 }
 \description{
-Coerce a sparse matrix M in tibble where columns: i is row index, j is column index and x the value M[i,j]
+Coerce a sparse matrix M in tibble where columns: i is row index, j is column index and x the value M[i,j].
+}
+\details{
+MeltSpm
 }
 \examples{
 i=c(1,1,2,2,3,3,4,4,4,4)

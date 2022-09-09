@@ -2,7 +2,7 @@
 % Please edit documentation in R/WrapFunction.r
 \name{WrapFunction}
 \alias{WrapFunction}
-\title{WrapFunction}
+\title{Wrap a string into a function.}
 \usage{
 WrapFunction(...)
 }
@@ -10,10 +10,13 @@ WrapFunction(...)
 \item{...}{<character>: a String that could be parse and eval as a function.}
 }
 \value{
-the result of the function or a function
+the result of the function or a function.
 }
 \description{
-Wrap a string in a function
+Wrap a string into a function.
+}
+\details{
+WrapFunction
 }
 \examples{
 X <- c(2,4,NA)

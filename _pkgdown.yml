@@ -1,0 +1,25 @@
+template:
+  bootstrap: 5
+
+reference:
+- title: Matrix
+  contents:
+  - MeltSpm
+  - PadMtx
+  - ResizeMatrix
+  - Rise0
+
+- title: Rle
+  contents:
+  - ReduceRun
+
+- title: Other
+  contents:
+  - WrapFunction
+
+articles:
+- title: Other
+  navbar: ~
+  contents:
+  - Standard  
+

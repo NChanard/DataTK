@@ -13,11 +13,15 @@ Imports:
     magrittr,
     Matrix,
     methods,
+    rlang,
     S4Vectors,
     tibble
+Suggests:
+    knitr
 Remotes:
     NChanard/DevTK
 License: MIT + file LICENSE
+VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1

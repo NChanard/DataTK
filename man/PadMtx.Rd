@@ -2,7 +2,7 @@
 % Please edit documentation in R/PadMtx.r
 \name{PadMtx}
 \alias{PadMtx}
-\title{PadMtx}
+\title{Add a value around a matrix.}
 \usage{
 PadMtx(
   mat.mtx = NULL,
@@ -12,19 +12,22 @@ PadMtx(
 )
 }
 \arguments{
-\item{mat.mtx}{<matrix>: Numerical matrix}
+\item{mat.mtx}{<matrix>: numerical matrix.}
 
-\item{padSize.num}{<numeric>: Number of columns or rows to add (Default 1)}
+\item{padSize.num}{<numeric>: number of columns or rows to add. (Default 1)}
 
-\item{value.num}{<numeric>: Value to add (Default 0) If Null create mirror of choosen sides.}
+\item{value.num}{<numeric>: value to add. If Null create mirror of choosen sides. (Default 0)}
 
-\item{side.chr}{<character>: side to pad, must be one or some of 'top','bot','right' or 'left' (Default c('top','bot','right','left') )}
+\item{side.chr}{<character>: side to pad, must be one or some of 'top','bot','right' or 'left'. (Default c('top','bot','right','left') )}
 }
 \value{
-Matrix
+a matrix.
 }
 \description{
-Add a value around a matrix
+Add a value around a matrix.
+}
+\details{
+PadMtx
 }
 \examples{
 mat.mtx = matrix(1:25,5,5)

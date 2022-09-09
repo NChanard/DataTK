@@ -1,8 +1,9 @@
-#' WrapFunction
+#' Wrap a string into a function.
 #'
-#' Wrap a string in a function
+#' WrapFunction
+#' @description Wrap a string into a function.
 #' @param ... <character>: a String that could be parse and eval as a function.
-#' @return the result of the function or a function
+#' @return the result of the function or a function.
 #' @examples
 #' X <- c(2,4,NA)
 #' myString <- "mean(X, na.rm=TRUE)"

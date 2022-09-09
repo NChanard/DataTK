@@ -2,24 +2,27 @@
 % Please edit documentation in R/ReduceRun.r
 \name{ReduceRun}
 \alias{ReduceRun}
-\title{ReduceRun}
+\title{Apply a function over two RLE}
 \usage{
 ReduceRun(first.rle, second.rle, reduceFun.chr = "paste", ...)
 }
 \arguments{
-\item{first.rle}{<matrix>: first rle}
+\item{first.rle}{<rle or Rle>: first rle.}
 
-\item{second.rle}{<matrix>: second rle}
+\item{second.rle}{<rle or Rle>>: second rle.}
 
 \item{reduceFun.chr}{<character>: name of a function to apply e.g paste, sum, mean.}
 
-\item{...}{<...>: Other parameter for the reduce function}
+\item{...}{<...>: Other parameter for the reduce function.}
 }
 \value{
 reduced Rle
 }
 \description{
-apply a function to the values of two RLE. e.g paste, sum, mean
+Apply a function on the values over two RLE and return one RLE.
+}
+\details{
+ReduceRun
 }
 \examples{
 first.rle = rle(c("A","A","B"))

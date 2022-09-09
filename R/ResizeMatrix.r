@@ -1,9 +1,10 @@
-#' ResizeMatrix
+#' Resize a matrix
 #'
-#' Resize a matrix in new dimension
-#' @param matrice.mtx <matrix>: a Matrix to resize
+#' ResizeMatrix
+#' @description Resize a numericam matrix in new dimension.
+#' @param matrice.mtx <matrix>: a  numericam matrix to resize.
 #' @param newDim.num <integer>: the number of rows and cols in resized matrix.
-#' @return resized matrix
+#' @return resized matrix.
 #' @examples
 #' matrice.mtx <- matrix(0,11,11)
 #' matrice.mtx[which(as.logical(1:(11*11)%%2))] <- 1:ceiling((11*11)/2)

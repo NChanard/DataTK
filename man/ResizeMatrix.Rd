@@ -2,20 +2,23 @@
 % Please edit documentation in R/ResizeMatrix.r
 \name{ResizeMatrix}
 \alias{ResizeMatrix}
-\title{ResizeMatrix}
+\title{Resize a matrix}
 \usage{
 ResizeMatrix(matrice.mtx, newDim.num = dim(matrice.mtx))
 }
 \arguments{
-\item{matrice.mtx}{<matrix>: a Matrix to resize}
+\item{matrice.mtx}{<matrix>: a  numericam matrix to resize.}
 
 \item{newDim.num}{<integer>: the number of rows and cols in resized matrix.}
 }
 \value{
-resized matrix
+resized matrix.
 }
 \description{
-Resize a matrix in new dimension
+Resize a numericam matrix in new dimension.
+}
+\details{
+ResizeMatrix
 }
 \examples{
 matrice.mtx <- matrix(0,11,11)

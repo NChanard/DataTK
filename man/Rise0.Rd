@@ -2,22 +2,25 @@
 % Please edit documentation in R/Rise0.r
 \name{Rise0}
 \alias{Rise0}
-\title{Rise0}
+\title{Explicit zeros in sparse matrix.}
 \usage{
 Rise0(mat.spm = NULL, which.ndx = NULL, coord.dtf = NULL)
 }
 \arguments{
-\item{mat.spm}{<dgCMatrix or dgCMatrix coercible>: Matrix}
+\item{mat.spm}{<dgCMatrix or dgCMatrix coercible>: a sparse matrix.}
 
-\item{which.ndx}{<numeric> vector of positions of the zeros to be explained (column driven)}
+\item{which.ndx}{<numeric> vector of positions of the zeros to be explicits (column driven). If NULL and coord.dtf NULL all zeros are explicits. (Default NULL)}
 
-\item{coord.dtf}{<data.frame> a coordinate data frame for zeros to explicit Row index in fisrt column, columns index in second columns.}
+\item{coord.dtf}{<data.frame> a coordinate data frame for zeros to explicit Row index in fisrt column, columns index in second columns. If NULL the which.ndx parameter is used (Default NULL)}
 }
 \value{
-Sparse matrix with some explicit zeros
+Sparse matrix with some explicit zeros.
 }
 \description{
-Explicit some implicit zeros
+Explicit some implicit zeros in sparse matrix.
+}
+\details{
+Rise0
 }
 \examples{
 set.seed(123)
