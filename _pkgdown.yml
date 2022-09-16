@@ -17,6 +17,10 @@ reference:
   contents:
   - TransposeList
 
+- title: Data.frame
+  contents:
+  - BindFillRows
+
 - title: Other
   contents:
   - WrapFunction

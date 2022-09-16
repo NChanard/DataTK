@@ -21,7 +21,8 @@ TransposeList
 \examples{
 my_lst <- list(
     first=list("A1","B1","C1"),
-    second=list("A2","B2")
+    second=list("A2","B2"),
+    third=list(NULL,"B3")
 )
 TransposeList(my_lst)
 }
