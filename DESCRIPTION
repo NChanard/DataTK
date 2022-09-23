@@ -1,12 +1,13 @@
-Package: DataTK
 Type: Package
+Package: DataTK
 Title: Set of Data Manipulation Tools
 Version: 0.1.0
 Author: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
 Maintainer: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
 Description: Set of data manipulation tools.
+License: MIT + file LICENSE
 Depends:
-    R (>= 4.1),
+    R (>= 4.1)
 Imports:
     DevTK,
     dplyr,
@@ -17,12 +18,15 @@ Imports:
     S4Vectors,
     tibble
 Suggests:
+    covr,
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
 Remotes:
     NChanard/DevTK
-License: MIT + file LICENSE
-VignetteBuilder: knitr
+Config/testthat/edition: 3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.1

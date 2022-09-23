@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/NChanard/DataTK/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NChanard/DataTK/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/NChanard/DataTK/branch/master/graph/badge.svg)](https://app.codecov.io/gh/NChanard/DataTK?branch=master)
 <!-- badges: end -->
 
 DataTK is a set of data manipulation tools.
