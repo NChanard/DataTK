@@ -44,7 +44,7 @@ ReduceRun <- function(first.rle, second.rle, reduceFun.chr="paste",...){
                 lens.lst[[i]]<<-lens.lst[[i]][-1]
                 vals.lst[[i]]<<-vals.lst[[i]][-1]
             }
-            }) %>% invisible()
+            }) |> invisible()
     }
     return(S4Vectors::Rle(values=newVal.vec,lengths=newLen.num))
 }

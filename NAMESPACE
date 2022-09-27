@@ -1,6 +1,1 @@
 exportPattern("^[[:alpha:]]+")
-export("%>%")
-importFrom(magrittr,"%>%")
-export("%<>%")
-importFrom(magrittr,"%<>%")
-importFrom("rlang", ".data")

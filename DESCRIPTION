@@ -11,10 +11,8 @@ Depends:
 Imports:
     DevTK,
     dplyr,
-    magrittr,
     Matrix,
     methods,
-    rlang,
     S4Vectors,
     tibble
 Suggests:

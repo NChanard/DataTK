@@ -15,14 +15,16 @@
 #' meltedMat.tbl[order(meltedMat.tbl$i),]
 MeltSpm = function(mat.spm=NULL){
         if(DevTK::NotIn("dgCMatrix",class(mat.spm))){mat.spm=methods::as(mat.spm, "dgCMatrix")}
-        dp.num <- mat.spm@p %>% diff
-        tibble::tibble(
-            i=mat.spm@i+1 %>% as.integer,
-            j=mat.spm@Dim %>% magrittr::extract(2) %>% seq_len %>% lapply(function(j.ndx){
-                rep.num <- dp.num[j.ndx] 
-                rep(j.ndx,rep.num) %>%
-                return(.data) }) %>%
-                unlist,
+        dp.num <- diff(mat.spm@p)
+        mat.tbl <- tibble::tibble(
+            i=as.integer(mat.spm@i+1),
+            j=seq_len(mat.spm@Dim[2]) |> lapply(function(j.ndx){
+                    rep.num <- dp.num[j.ndx] 
+                    return(rep(j.ndx,rep.num)) 
+                }) |>
+                unlist(),
             x=mat.spm@x
-        ) %>% DevTK::AddAttr(list(matrice.attr=attributes(mat.spm)[which(DevTK::NotIn(names(attributes(mat.spm)),c("i","p","Dimnames","x","factors","class")))])) %>% return(.data)
+        ) |>
+        DevTK::AddAttr(list(matrice.attr=attributes(mat.spm)[which(DevTK::NotIn(names(attributes(mat.spm)),c("i","p","Dimnames","x","factors","class")))]))
+        return(mat.tbl)
 }

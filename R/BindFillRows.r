@@ -17,9 +17,9 @@ BindFillRows <- function(data.lst_df,...){
     }
     data.lst_df <- lapply(seq_along(data.lst_df), function(data.ndx){
         data.df <- data.lst_df[[data.ndx]]
-        dataNames.chr <- lapply(data.lst_df[-data.ndx], names) %>%
-            unlist %>%
-            unique
+        dataNames.chr <- lapply(data.lst_df[-data.ndx], names) |>
+            unlist() |>
+            unique()
         data.df[setdiff(dataNames.chr, names(data.df))] <- NA
         return(data.df)
     })
