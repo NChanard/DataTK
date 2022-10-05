@@ -1,7 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^\.git
-^docs
 ^LICENSE\.md$
 ^pkgdown$
 ^\.github$
