@@ -4,11 +4,10 @@ Title: Set of Data Manipulation Tools
 Version: 0.1.0
 Author: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
 Maintainer: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
-URL:
-    https://nchanard.github.io/DataTK/,
-    https://github.com/NChanard/DataTK
 Description: Set of data manipulation tools.
 License: MIT + file LICENSE
+URL:https://nchanard.github.io/DataTK/,
+    https://github.com/NChanard/DataTK
 Depends:
     R (>= 4.1)
 Imports:
