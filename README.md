@@ -18,7 +18,7 @@ You can install the development version of DataTK from
 [GitHub](https://github.com/) with:
 
 ``` r
-devtools::install_github("NChanard/DataTK")
+remotes::install_github("NChanard/DataTK")
 ```
 
 ## Documentation

@@ -19,11 +19,7 @@ Imports:
     tibble
 Suggests:
     covr,
-    knitr,
-    rmarkdown,
     testthat (>= 3.0.0)
-VignetteBuilder: 
-    knitr
 Remotes:
     NChanard/DevTK
 Config/testthat/edition: 3
